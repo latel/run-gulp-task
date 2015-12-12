@@ -1,8 +1,11 @@
 {
   "name": "run-gulp-task",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Run gulp task with Promise API",
   "main": "index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --require should --reporter spec",
     "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover -x ./test/source/**/* ./node_modules/.bin/_mocha -- --require should",
