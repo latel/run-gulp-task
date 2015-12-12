@@ -1,26 +1,37 @@
 {
   "name": "run-gulp-task",
   "version": "0.0.1",
-  "description": "Run gulp task like a boss",
+  "description": "Run gulp task with Promise API",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --require should --reporter spec",
-    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
-    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover -x ./test/source/**/* ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover -x ./test/source/**/* ./node_modules/.bin/_mocha --report lcovonly -- --require should"
   },
   "author": "LingyuCoder",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "~3.9.0",
     "istanbul": "~0.4.0",
     "mocha": "~2.3.3",
-    "should": "~7.1.1"
+    "should": "~7.1.1",
+    "should-promised": "~0.3.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/LingyuCoder/run-gulp-task"
   },
-  "keywords": [],
+  "keywords": [
+    "gulp",
+    "run-gulp-task"
+  ],
   "bugs": {
     "url": "https://github.com/LingyuCoder/run-gulp-task/issues"
+  },
+  "dependencies": {
+    "co": "~4.6.0",
+    "get-gulp-inst": "0.0.2",
+    "lodash": "~3.10.1",
+    "run-sequence": "~1.1.5"
   }
 }

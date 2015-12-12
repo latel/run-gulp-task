@@ -1,6 +1,15 @@
 # run-gulp-task
 
-Run gulp task like a boss
+[![Test coverage](https://img.shields.io/coveralls/LingyuCoder/run-gulp-task.svg?style=flat-square)](https://coveralls.io/r/LingyuCoder/run-gulp-task?branch=master)
+[![Build Status](https://travis-ci.org/LingyuCoder/run-gulp-task.png)](https://travis-ci.org/LingyuCoder/run-gulp-task)
+[![Dependency Status](https://david-dm.org/LingyuCoder/run-gulp-task.svg)](https://david-dm.org/LingyuCoder/run-gulp-task)
+[![devDependency Status](https://david-dm.org/LingyuCoder/run-gulp-task/dev-status.svg)](https://david-dm.org/LingyuCoder/run-gulp-task#info=devDependencies)
+[![NPM version](http://img.shields.io/npm/v/run-gulp-task.svg?style=flat-square)](http://npmjs.org/package/run-gulp-task)
+[![node](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](http://nodejs.org/download/)
+[![License](http://img.shields.io/npm/l/run-gulp-task.svg?style=flat-square)](LICENSE)
+[![npm download](https://img.shields.io/npm/dm/run-gulp-task.svg?style=flat-square)](https://npmjs.org/package/run-gulp-task)
+
+Run gulp task of a gulpfile with Promise API
 
 ## Installation
 
@@ -9,6 +18,27 @@ $ npm install --save run-gulp-task
 ```
 
 ## Usage
+
+```javascript
+const runGulpTask = require('run-gulp-task');
+
+runGulpTask('build', '/User/xyz/yourProject/gulpfile.js')
+  .then(() => {
+    // do something after running
+  });
+  .catch(e => {
+    // error handling
+  })
+```
+
+## Parameters
+
+`runGulpTask(String:taskName[, String:gulpfilePath])`
+
+| Name       | Description  | Type | Default Value |
+| :-------- | :-- | :--:| :--: | :--: |
+| taskName | name of the task | String | `undefined` (Required) |
+| gulpfilePath | absolute path of your gulpfile | String | `path.join(process.cwd(), 'gulpfile.js')` |
 
 ## License
 
