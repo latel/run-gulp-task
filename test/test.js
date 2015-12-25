@@ -30,6 +30,12 @@ describe('runGulpTask', () => {
         message: `Can not find task named "notExists" in file ${path.join(process.cwd(), 'gulpfile.js')}`
       });
   });
+  it('should reject when gulp task error', () => {
+    return runGulpTask('error')
+      .should.be.rejectedWith(Error, {
+        message: `An error occured in task 'error'.`
+      });
+  });
   it('should reject when no task name', () => {
     return runGulpTask()
       .should.be.rejectedWith(Error, {
