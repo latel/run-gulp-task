@@ -3,6 +3,7 @@ require('should');
 require('should-promised');
 const path = require('path');
 const runGulpTask = require('../index');
+const PluginError = require('gulp-util').PluginError;
 const CWD = process.cwd();
 
 describe('runGulpTask', () => {
@@ -40,6 +41,12 @@ describe('runGulpTask', () => {
     return runGulpTask()
       .should.be.rejectedWith(Error, {
         message: 'Task name must exists'
+      });
+  });
+  it('should reject when plugin error', () => {
+    return runGulpTask('pluginerror')
+      .should.be.rejectedWith(PluginError, {
+        message: 'plugin error occured'
       });
   });
 });

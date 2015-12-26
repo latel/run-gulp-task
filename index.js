@@ -4,10 +4,7 @@ const path = require('path');
 const co = require('co');
 const getTask = require('./lib/getTask');
 const getRunner = require('./lib/getRunner');
-const run = (runner, task) => new Promise((resolve, reject) => runner(task.taskName, e => {
-  if (e) return reject(e);
-  resolve();
-}));
+const run = require('./lib/run');
 
 module.exports = co.wrap(function*(taskName, gulpfilePath) {
   if (!taskName) return Promise.reject(new Error('Task name must exists'));

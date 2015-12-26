@@ -1,6 +1,6 @@
 {
   "name": "run-gulp-task",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Run gulp task with Promise API",
   "main": "index.js",
   "engines": {
@@ -15,10 +15,12 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "~3.9.0",
+    "gulp-util": "^3.0.7",
     "istanbul": "~0.4.0",
     "mocha": "~2.3.3",
     "should": "~7.1.1",
-    "should-promised": "~0.3.1"
+    "should-promised": "~0.3.1",
+    "through2": "^2.0.0"
   },
   "repository": {
     "type": "git",
