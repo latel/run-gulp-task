@@ -1,9 +1,9 @@
 # run-gulp-task
 
-[![Test coverage](https://img.shields.io/coveralls/LingyuCoder/run-gulp-task.svg?style=flat-square)](https://coveralls.io/r/LingyuCoder/run-gulp-task?branch=master)
-[![Build Status](https://travis-ci.org/LingyuCoder/run-gulp-task.png)](https://travis-ci.org/LingyuCoder/run-gulp-task)
-[![Dependency Status](https://david-dm.org/LingyuCoder/run-gulp-task.svg)](https://david-dm.org/LingyuCoder/run-gulp-task)
-[![devDependency Status](https://david-dm.org/LingyuCoder/run-gulp-task/dev-status.svg)](https://david-dm.org/LingyuCoder/run-gulp-task#info=devDependencies)
+[![Test coverage](https://img.shields.io/coveralls/ly-tools/run-gulp-task.svg?style=flat-square)](https://coveralls.io/r/ly-tools/run-gulp-task?branch=master)
+[![Build Status](https://travis-ci.org/ly-tools/run-gulp-task.png)](https://travis-ci.org/ly-tools/run-gulp-task)
+[![Dependency Status](https://david-dm.org/ly-tools/run-gulp-task.svg)](https://david-dm.org/ly-tools/run-gulp-task)
+[![devDependency Status](https://david-dm.org/ly-tools/run-gulp-task/dev-status.svg)](https://david-dm.org/ly-tools/run-gulp-task#info=devDependencies)
 [![NPM version](http://img.shields.io/npm/v/run-gulp-task.svg?style=flat-square)](http://npmjs.org/package/run-gulp-task)
 [![node](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](http://nodejs.org/download/)
 [![License](http://img.shields.io/npm/l/run-gulp-task.svg?style=flat-square)](LICENSE)
