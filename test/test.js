@@ -9,9 +9,17 @@ const CWD = process.cwd();
 describe('runGulpTask', () => {
   beforeEach(() => process.chdir(path.join(__dirname, 'source')));
   afterEach(() => process.chdir(CWD));
-  it('should run task', done => {
+  it('should run task with gulpfile.js in cwd', done => {
     global.gulpBuildRuned = false;
     return runGulpTask('build')
+      .then(() => {
+        global.gulpBuildRunned.should.be.true();
+        done();
+      });
+  });
+  it('should run task with gulp instance', done => {
+    global.gulpBuildRuned = false;
+    return runGulpTask('build', require(path.join(process.cwd(), 'gulpfile.export.js')))
       .then(() => {
         global.gulpBuildRunned.should.be.true();
         done();
