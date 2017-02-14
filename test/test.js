@@ -41,9 +41,7 @@ describe('runGulpTask', () => {
   });
   it('should reject when gulp task error', () => {
     return runGulpTask('error')
-      .should.be.rejectedWith(Error, {
-        message: `An error occured in task 'error'.`
-      });
+      .should.be.rejectedWith(PluginError);
   });
   it('should reject when no task name', () => {
     return runGulpTask()
@@ -53,8 +51,6 @@ describe('runGulpTask', () => {
   });
   it('should reject when plugin error', () => {
     return runGulpTask('pluginerror')
-      .should.be.rejectedWith(PluginError, {
-        message: 'plugin error occured'
-      });
+      .should.be.rejectedWith(PluginError);
   });
 });
