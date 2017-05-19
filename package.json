@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "co": "~4.6.0",
-    "get-gulp-inst": "0.0.2",
+    "get-gulp-inst": "github:latel/get-gulp-inst",
     "lodash": "~3.10.1",
     "run-sequence": "^1.2.2"
   }
